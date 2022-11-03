@@ -1,7 +1,7 @@
 # fluent-plugin-filter-docker_metadata
 
 
-##Usage
+## Usage
 To use this plugin the following config can be used
 
 ```
