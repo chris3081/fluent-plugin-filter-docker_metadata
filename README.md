@@ -4,6 +4,7 @@
 ##Usage
 To use this plugin the following config can be used
 
+```
 <source>
   @type tail
   read_from_head true
@@ -26,9 +27,11 @@ To use this plugin the following config can be used
     message ${record["container_name"]}: ${record["log"]}
   </record>
 </filter>
+```
 
 If you are running this in a container you will need to add the below filter before your output plugin  (assuming your container hostname is fluent
 
+```
 <filter docker.**>
   @type grep
   <exclude>
@@ -36,3 +39,4 @@ If you are running this in a container you will need to add the below filter bef
     pattern /fluentd/
   </exclude>
 </filter>
+```
